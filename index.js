@@ -1,6 +1,8 @@
 const core = require('@actions/core');
 const request = require('request');
 
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
+
 try {
   const jenkinsUrl = core.getInput('jenkinsUrl');
   const username = core.getInput('username');
